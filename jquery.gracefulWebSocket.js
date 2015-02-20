@@ -157,7 +157,7 @@
 			
 			// create a new websocket or fallback
 			var ws = window.WebSocket ? new WebSocket(url) : new FallbackSocket();
-	 		$(window).unload(function () { ws.close(); ws = null });
+	 		$(window).unload(function () { console.write("unload widow should close download"); /*ws.close(); ws = null*/ });
 			return ws;
 		}
 	});
